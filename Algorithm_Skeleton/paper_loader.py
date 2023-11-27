@@ -3,7 +3,6 @@ import PyPDF2
 import json
 
 
-
 def batch_process_pdfs(folder_path, output_json):
     # 获取文件夹中所有PDF文件的路径
     pdf_files = [f for f in os.listdir(folder_path) if f.endswith('.pdf')]
@@ -18,7 +17,3 @@ def batch_process_pdfs(folder_path, output_json):
 
         # 获取文件名（不包括扩展名）
         file_name = os.path.splitext(pdf_file)[0]
-
-
-
-
