@@ -1,4 +1,4 @@
-from paper_splitter import Splitter
+from paper_splitter import splitter
 
 
 def load_prompt(prompt_file):

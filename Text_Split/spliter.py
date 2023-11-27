@@ -1,7 +1,7 @@
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-pdf_path = "/Users/xueliang/Desktop/硕士毕业论文/毕业论文参考文献/Distilling Model/2212.00193.pdf"
+pdf_path = "C:/Users/薛亮/Desktop/Algorithm Skeleton Mining Based on Optimized Pre-training Mechanisms in Survey Paper.pdf"
 loader = PyPDFLoader(pdf_path)
 pages = loader.load_and_split()
 print(f"加载完毕，共加载{len(pages)}页PDF文件")
