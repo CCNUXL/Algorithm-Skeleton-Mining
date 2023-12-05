@@ -1,4 +1,6 @@
-from paper_splitter import splitter
+# from paper_splitter import splitter
+from transformers import AutoTokenizer, AutoModel
+from IPython.display import display, Markdown, clear_output
 
 
 def load_prompt(prompt_file):
@@ -8,7 +10,18 @@ def load_prompt(prompt_file):
 
 
 def llm_response(prompt):
-    response = prompt + '\n' + "OK"
+    # 加载模型
+    model_path = "Model\chatglm-6b-int4"
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
+    # 按需修改，目前只支持 4/8 bit 量化
+    model = AutoModel.from_pretrained(model_path, trust_remote_code=True).quantize(4).half().cuda()
+    model = model.eval()
+    # # 使用 IPython.display 流式打印模型输出
+    # for response, history in model.stream_chat(
+    #         tokenizer, prompt, history=[]):
+    #     clear_output(wait=True)
+    #     display(Markdown(response))
+    response, history = model.chat(tokenizer, prompt, history=[])
     return response
 
 
@@ -46,3 +59,7 @@ def structured_mining(texts):
             background = res
 
     print(background)
+
+
+if __name__ == "__main__":
+    llm_response("宫保鸡丁怎么做?")
