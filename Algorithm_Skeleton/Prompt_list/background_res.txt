@@ -1,0 +1,1 @@
+Please extract the writing background from the following statements. If unable to extract, please do not output any answers
