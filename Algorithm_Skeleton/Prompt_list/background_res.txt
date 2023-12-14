@@ -1,1 +1,1 @@
-Please extract the writing background from the following statements. If unable to extract, please do not output any answers
+Please extract effective information about the writing background from the paragraph, the content of the paragraph is as follows:

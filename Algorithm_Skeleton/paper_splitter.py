@@ -21,8 +21,8 @@ def splitter(pdf_path):
     # print(f"加载完毕，共加载{len(pages)}页PDF文件")
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=200,
-        chunk_overlap=10,
+        chunk_size=2000,
+        chunk_overlap=500,
         length_function=len
     )
 

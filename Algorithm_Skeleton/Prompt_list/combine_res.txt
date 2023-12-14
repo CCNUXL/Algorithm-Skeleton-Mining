@@ -1,1 +1,1 @@
-Please combine the following multiple sentences into a simple expression，the word count should not exceed 100.
+Please summarize the following paragraph as short and concise as possible, taking care not to exceed 500 words.
