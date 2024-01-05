@@ -1,1 +1,1 @@
-请将上述多段描述合并为一段简洁的描述。字数限定100字以内。
+Please summarize the following paragraph as short and concise as possible, taking care not to exceed 500 words.
