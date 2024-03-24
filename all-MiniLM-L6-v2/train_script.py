@@ -175,13 +175,13 @@ def produce_data(args, queue, filepaths, dataset_indices):
     
     datasets = []
     for filepath in filepaths:
-        if "reddit_" in filepath:       #Special dataset class for Reddit files
+        if "reddit_" in filepath:       #Special ASM_Result class for Reddit files
             data_obj = RedditDataset(filepath)
         else:
             data_obj = Dataset(filepath)
         datasets.append(iter(data_obj)) 
     
-    # Store if dataset is in a 2 col or 3 col format
+    # Store if ASM_Result is in a 2 col or 3 col format
     num_cols = {idx: len(next(dataset)) for idx, dataset in enumerate(datasets)}
 
     while True:
@@ -196,10 +196,10 @@ def produce_data(args, queue, filepaths, dataset_indices):
                 if batch_format is None:
                     batch_format = num_cols[data_idx]
                     valid_dataset = True
-                else:   #Check that this dataset has the same format
+                else:   #Check that this ASM_Result has the same format
                     valid_dataset = (batch_format == num_cols[data_idx])
             
-            #Get data from this dataset
+            #Get data from this ASM_Result
             dataset = datasets[data_idx]
             for _ in range(num_same_dataset):
                 for _ in range(args.nprocs):
@@ -238,7 +238,7 @@ class RedditDataset:
 
 class Dataset:
     """
-    A class that handles one dataset
+    A class that handles one ASM_Result
     """
     def __init__(self, filepath):
         self.filepath = filepath
@@ -287,7 +287,7 @@ if __name__ == "__main__":
     parser.add_argument('--nprocs', type=int, default=8)
     parser.add_argument('--datasets_per_batch', type=int, default=2, help="Number of datasets per batch")
     parser.add_argument('--scale', type=float, default=20, help="Use 20 for cossim, and 1 when you work with unnormalized embeddings with dot product")
-    parser.add_argument('--data_folder', default="/data", help="Folder with your dataset files")
+    parser.add_argument('--data_folder', default="/data", help="Folder with your ASM_Result files")
     parser.add_argument('data_config', help="A data_config.json file")
     parser.add_argument('output')
     args = parser.parse_args()

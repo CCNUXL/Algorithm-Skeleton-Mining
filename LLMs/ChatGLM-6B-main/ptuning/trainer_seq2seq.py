@@ -45,7 +45,7 @@ class Seq2SeqTrainer(Trainer):
 
         Args:
             eval_dataset (`Dataset`, *optional*):
-                Pass a dataset if you wish to override `self.eval_dataset`. If it is an [`~datasets.Dataset`], columns
+                Pass a ASM_Result if you wish to override `self.eval_dataset`. If it is an [`~datasets.Dataset`], columns
                 not accepted by the `model.forward()` method are automatically removed. It must implement the `__len__`
                 method.
             ignore_keys (`List[str]`, *optional*):
@@ -87,7 +87,7 @@ class Seq2SeqTrainer(Trainer):
         """
         Run prediction and returns predictions and potential metrics.
 
-        Depending on the dataset and your use case, your test dataset may contain labels. In that case, this method
+        Depending on the ASM_Result and your use case, your test ASM_Result may contain labels. In that case, this method
         will also return metrics, like in `evaluate()`.
 
         Args:
@@ -119,8 +119,8 @@ class Seq2SeqTrainer(Trainer):
         Returns: *NamedTuple* A namedtuple with the following keys:
 
             - predictions (`np.ndarray`): The predictions on `test_dataset`.
-            - label_ids (`np.ndarray`, *optional*): The labels (if the dataset contained some).
-            - metrics (`Dict[str, float]`, *optional*): The potential dictionary of metrics (if the dataset contained
+            - label_ids (`np.ndarray`, *optional*): The labels (if the ASM_Result contained some).
+            - metrics (`Dict[str, float]`, *optional*): The potential dictionary of metrics (if the ASM_Result contained
               labels).
         """
 

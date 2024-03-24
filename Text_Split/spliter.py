@@ -11,7 +11,7 @@ parent_directory = os.path.dirname(current_file_path)
 parent_parent_directory = os.path.dirname(parent_directory)
 
 # 拼接文件路径
-pdf_path = os.path.join(parent_parent_directory, "Datasets/Papers/CoT/2201.11903.pdf")
+pdf_path = os.path.join(parent_parent_directory, "Dataset/Papers/CoT/2201.11903.pdf")
 
 print(pdf_path)
 

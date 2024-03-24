@@ -70,10 +70,10 @@ class DataTrainingArguments:
     lang: Optional[str] = field(default=None, metadata={"help": "Language id for summarization."})
 
     dataset_name: Optional[str] = field(
-        default=None, metadata={"help": "The name of the dataset to use (via the datasets library)."}
+        default=None, metadata={"help": "The name of the ASM_Result to use (via the datasets library)."}
     )
     dataset_config_name: Optional[str] = field(
-        default=None, metadata={"help": "The configuration name of the dataset to use (via the datasets library)."}
+        default=None, metadata={"help": "The configuration name of the ASM_Result to use (via the datasets library)."}
     )
     prompt_column: Optional[str] = field(
         default=None,
@@ -211,7 +211,7 @@ class DataTrainingArguments:
 
     def __post_init__(self):
         if self.dataset_name is None and self.train_file is None and self.validation_file is None and self.test_file is None:
-            raise ValueError("Need either a dataset name or a training/validation/test file.")
+            raise ValueError("Need either a ASM_Result name or a training/validation/test file.")
         else:
             if self.train_file is not None:
                 extension = self.train_file.split(".")[-1]

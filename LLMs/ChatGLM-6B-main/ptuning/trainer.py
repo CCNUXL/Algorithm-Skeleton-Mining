@@ -243,18 +243,18 @@ class Trainer:
             default to [`default_data_collator`] if no `tokenizer` is provided, an instance of
             [`DataCollatorWithPadding`] otherwise.
         train_dataset (`torch.utils.data.Dataset` or `torch.utils.data.IterableDataset`, *optional*):
-            The dataset to use for training. If it is a [`~datasets.Dataset`], columns not accepted by the
+            The ASM_Result to use for training. If it is a [`~datasets.Dataset`], columns not accepted by the
             `model.forward()` method are automatically removed.
 
             Note that if it's a `torch.utils.data.IterableDataset` with some randomization and you are training in a
-            distributed fashion, your iterable dataset should either use a internal attribute `generator` that is a
+            distributed fashion, your iterable ASM_Result should either use a internal attribute `generator` that is a
             `torch.Generator` for the randomization that must be identical on all processes (and the Trainer will
             manually set the seed of this `generator` at each epoch) or have a `set_epoch()` method that internally
             sets the seed of the RNGs used.
         eval_dataset (Union[`torch.utils.data.Dataset`, Dict[str, `torch.utils.data.Dataset`]), *optional*):
-             The dataset to use for evaluation. If it is a [`~datasets.Dataset`], columns not accepted by the
+             The ASM_Result to use for evaluation. If it is a [`~datasets.Dataset`], columns not accepted by the
              `model.forward()` method are automatically removed. If it is a dictionary, it will evaluate on each
-             dataset prepending the dictionary key to the metric name.
+             ASM_Result prepending the dictionary key to the metric name.
         tokenizer ([`PreTrainedTokenizerBase`], *optional*):
             The tokenizer used to preprocess the data. If provided, will be used to automatically pad the inputs to the
             maximum length when batching inputs, and it will be saved along the model to make it easier to rerun an
@@ -282,7 +282,7 @@ class Trainer:
             tensors, the logits and the labels, and return the logits once processed as desired. The modifications made
             by this function will be reflected in the predictions received by `compute_metrics`.
 
-            Note that the labels (second parameter) will be `None` if the dataset does not have them.
+            Note that the labels (second parameter) will be `None` if the ASM_Result does not have them.
 
     Important attributes:
 
@@ -980,7 +980,7 @@ class Trainer:
 
         Args:
             test_dataset (`torch.utils.data.Dataset`, *optional*):
-                The test dataset to use. If it is a [`~datasets.Dataset`], columns not accepted by the
+                The test ASM_Result to use. If it is a [`~datasets.Dataset`], columns not accepted by the
                 `model.forward()` method are automatically removed. It must implement `__len__`.
         """
         data_collator = self.data_collator
@@ -1202,8 +1202,8 @@ class Trainer:
 
     def num_examples(self, dataloader: DataLoader) -> int:
         """
-        Helper to get number of samples in a [`~torch.utils.data.DataLoader`] by accessing its dataset. When
-        dataloader.dataset does not exist or has no length, estimates as best it can
+        Helper to get number of samples in a [`~torch.utils.data.DataLoader`] by accessing its ASM_Result. When
+        dataloader.ASM_Result does not exist or has no length, estimates as best it can
         """
         try:
             dataset = dataloader.dataset
@@ -1211,7 +1211,7 @@ class Trainer:
             if isinstance(dataset, IterableDatasetShard):
                 return len(dataloader.dataset.dataset)
             return len(dataloader.dataset)
-        except (NameError, AttributeError, TypeError):  # no dataset or length, estimate by length of dataloader
+        except (NameError, AttributeError, TypeError):  # no ASM_Result or length, estimate by length of dataloader
             return len(dataloader) * self.args.per_device_train_batch_size
 
     def _hp_search_setup(self, trial: Union["optuna.Trial", Dict[str, Any]]):
@@ -1839,7 +1839,7 @@ class Trainer:
         for epoch in range(epochs_trained, num_train_epochs):
             if isinstance(train_dataloader, DataLoader) and isinstance(train_dataloader.sampler, DistributedSampler):
                 train_dataloader.sampler.set_epoch(epoch)
-            elif hasattr(train_dataloader, "dataset") and isinstance(train_dataloader.dataset, IterableDatasetShard):
+            elif hasattr(train_dataloader, "ASM_Result") and isinstance(train_dataloader.dataset, IterableDatasetShard):
                 train_dataloader.dataset.set_epoch(epoch)
 
             if is_torch_tpu_available():
@@ -2586,7 +2586,7 @@ class Trainer:
         if len(inputs) == 0:
             raise ValueError(
                 "The batch received was empty, your model won't be able to train on it. Double-check that your "
-                f"training dataset contains keys expected by the model: {','.join(self._signature_columns)}."
+                f"training ASM_Result contains keys expected by the model: {','.join(self._signature_columns)}."
             )
         if self.args.past_index >= 0 and self._past is not None:
             inputs["mems"] = self._past
@@ -2920,7 +2920,7 @@ class Trainer:
 
         Args:
             eval_dataset (`Dataset`, *optional*):
-                Pass a dataset if you wish to override `self.eval_dataset`. If it is a [`~datasets.Dataset`], columns
+                Pass a ASM_Result if you wish to override `self.eval_dataset`. If it is a [`~datasets.Dataset`], columns
                 not accepted by the `model.forward()` method are automatically removed. It must implement the `__len__`
                 method.
             ignore_keys (`Lst[str]`, *optional*):
@@ -2981,7 +2981,7 @@ class Trainer:
         """
         Run prediction and returns predictions and potential metrics.
 
-        Depending on the dataset and your use case, your test dataset may contain labels. In that case, this method
+        Depending on the ASM_Result and your use case, your test ASM_Result may contain labels. In that case, this method
         will also return metrics, like in `evaluate()`.
 
         Args:
@@ -3006,8 +3006,8 @@ class Trainer:
         Returns: *NamedTuple* A namedtuple with the following keys:
 
             - predictions (`np.ndarray`): The predictions on `test_dataset`.
-            - label_ids (`np.ndarray`, *optional*): The labels (if the dataset contained some).
-            - metrics (`Dict[str, float]`, *optional*): The potential dictionary of metrics (if the dataset contained
+            - label_ids (`np.ndarray`, *optional*): The labels (if the ASM_Result contained some).
+            - metrics (`Dict[str, float]`, *optional*): The potential dictionary of metrics (if the ASM_Result contained
               labels).
         """
         # memory metrics - must set up as early as possible
@@ -3088,7 +3088,7 @@ class Trainer:
 
         self.callback_handler.eval_dataloader = dataloader
         # Do this before wrapping.
-        eval_dataset = getattr(dataloader, "dataset", None)
+        eval_dataset = getattr(dataloader, "ASM_Result", None)
 
         if is_torch_tpu_available():
             dataloader = pl.ParallelLoader(dataloader, [args.device]).per_device_loader(args.device)
@@ -3108,7 +3108,7 @@ class Trainer:
         all_preds = None
         all_labels = None
         all_inputs = None
-        # Will be useful when we have an iterable dataset so don't know its length.
+        # Will be useful when we have an iterable ASM_Result so don't know its length.
 
         observed_num_examples = 0
         # Main evaluation loop
@@ -3199,14 +3199,14 @@ class Trainer:
         # Number of samples
         if has_length(eval_dataset):
             num_samples = len(eval_dataset)
-        # The instance check is weird and does not actually check for the type, but whether the dataset has the right
+        # The instance check is weird and does not actually check for the type, but whether the ASM_Result has the right
         # methods. Therefore we need to make sure it also has the attribute.
         elif isinstance(eval_dataset, IterableDatasetShard) and getattr(eval_dataset, "num_examples", 0) > 0:
             num_samples = eval_dataset.num_examples
         else:
             if has_length(dataloader):
                 num_samples = self.num_examples(dataloader)
-            else:  # both len(dataloader.dataset) and len(dataloader) fail
+            else:  # both len(dataloader.ASM_Result) and len(dataloader) fail
                 num_samples = observed_num_examples
         if num_samples == 0 and observed_num_examples > 0:
             num_samples = observed_num_examples
@@ -3501,11 +3501,11 @@ class Trainer:
             tasks (`str` or `List[str]`, *optional*):
                 One or several task identifiers, to be included in the metadata of the model card.
             dataset_tags (`str` or `List[str]`, *optional*):
-                One or several dataset tags, to be included in the metadata of the model card.
+                One or several ASM_Result tags, to be included in the metadata of the model card.
             dataset (`str` or `List[str]`, *optional*):
-                One or several dataset identifiers, to be included in the metadata of the model card.
+                One or several ASM_Result identifiers, to be included in the metadata of the model card.
             dataset_args (`str` or `List[str]`, *optional*):
-               One or several dataset arguments, to be included in the metadata of the model card.
+               One or several ASM_Result arguments, to be included in the metadata of the model card.
         """
         if not self.is_world_process_zero():
             return

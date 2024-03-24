@@ -1,0 +1,334 @@
+// Pre-trained Models for Natural Language Processing: A Survey
+// -----------------
+// Quesion Answering
+{
+    "Paper_ID": 1,
+    "Paper_Title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "Background": "the background of the article revolves around the need for a language representation model that can effectively capture bidirectional context and achieve state-of-the-art performance on various natural language processing tasks.",
+    "Scope": "Question Answering,Language Inference,Natural Language Processing Tasks,Text Generation,Feature-based Approaches,Fine-tuning,Multitask Training,General Language Representation ",
+    "Approach": "BERT pretrains bidirectional language representations from unlabeled text, facilitating fine-tuning for various tasks with minimal changes. Through a masked language model and feature-based approach, it achieves competitive results with simple modifications.",
+    "Model": "BERT,Transformer",
+    "Dataset": "the main datasets mentioned in the paper are GLUE, SQuAD, MNLI, and SWAG",
+    "Result": "BERT excels across eleven NLP tasks, elevating GLUE score to 80.5% (+7.7%), MNLI accuracy to 86.7% (+4.6%), and SQuAD v1.1 F1 to 93.2 (+1.5 points)."
+}
+{
+    "Paper_ID": 2,
+    "Paper_Title": "Retrospective Reader for Machine Reading Comprehension",
+    "Background": "The article introduces Retro-Reader for MRC, blending sketchy and intensive reading. It outperforms baselines on SQuAD2.0 and NewsQA, emphasizing the vital role of answer verification in MRC tasks.",
+    "Scope": "Article explores MRC with unanswerable questions. ",
+    "Approach": "The Retro-Reader integrates two stages of reading and verification strategies: sketchy reading and intensive reading.Sketchy reading involves briefly investigating the overall interactions between the passage and question to yield an initial judgment.Intensive reading is used to verify the answer and give the final prediction.",
+    "Model": "BERT, ALBERT, and ELECTRA.",
+    "Dataset": "The Retro-Reader model proposed in the article is evaluated on these two benchmark MRC challenge datasets, SQuAD2.0 and NewsQA",
+    "Result": "The proposed Retro-Reader model achieved new state-of-the-art results on the benchmark MRC challenge datasets, SQuAD2.0 and NewsQA."
+}
+{
+    "Paper_ID": 3,
+    "Paper_Title": "Technical report on Conversational Question Answering",
+    "Background": "Many models for the CoQA task were based on BERT previously, but until the authors undertook this work, no models based on RoBERTa had been proposed.",
+    "Scope": "Used for solving Conversational Question-Answering (CQA) tasks.",
+    "Approach": "The researchers added small perturbations at the word embedding layer to create adversarial examples and utilized knowledge distillation techniques to use the outputs of the teacher model as training targets for the student model. Additionally, the paper also introduces an ensemble strategy based on genetic algorithms. ",
+    "Model": "BERT, RoBERTa",
+    "Dataset": "CoQA",
+    "Result": "The system outperforms the current state-of-the-art single model on the CoQA test set, leading by a 2.6% absolute improvement in F1 score, and achieves a score of 90.7 after ensemble."
+}
+{
+    "Paper_ID": 4,
+    "Paper_Title": "Select, Answer and Explain: Interpretable Multi-Hop Reading Comprehension over Multiple Documents",
+    "Background": "This paper aims to tackle challenges in multi-hop multi-document QA tasks by constructing a model to identify supporting sentences and improve system interpretability, enhancing performance and user experience.",
+    "Scope": "Multi-hop multi-document QA (Question Answering) tasks, Graph Neural Network (GNN) applied to QA, Explainable QA, proposed SAE system.",
+    "Approach": "The SAE system achieves sentence-level prediction by combining techniques such as Graph Neural Network, Hybrid Attention Pooling Mechanism, Multi-task Learning, and Document Selection.",
+    "Model": "BERT, GNN, Interpretable Reasoning Network",
+    "Dataset": "HotpotQA",
+    "Result": "Evaluated on the HotpotQA dataset, the SAE system achieves an Exact Match (EM) score of 37.07, an F1 score of 66.12, a combined EM and F1 score of 51.18, and a joint EM and F1 score of 67.73. Compared to other models such as the baseline and DFGN, the SAE system demonstrates superior performance. Specifically, DFGN scores 30.09 on EM and 58.61 on F1, while the baseline model scores 8.80 on EM and 20.91 on F1."
+}
+// Sentiment Analysis
+{
+    "Paper_ID": 5,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 6,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 7,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 8,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 9,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 10,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 11,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 12,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 13,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 14,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 15,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 16,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 17,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 18,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 19,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 21,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 22,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 23,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 24,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 25,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 26,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 27,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 28,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 29,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 30,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 31,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 32,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 33,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}
+{
+    "Paper_ID": 34,
+    "Paper_Title": "",
+    "Background": "",
+    "Scope": "",
+    "Approach": "",
+    "Model": "",
+    "Dataset": "",
+    "Result": ""
+}

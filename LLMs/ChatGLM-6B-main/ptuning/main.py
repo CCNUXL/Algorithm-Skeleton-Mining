@@ -84,7 +84,7 @@ def main():
     # Set seed before initializing model.
     set_seed(training_args.seed)
 
-    # Load dataset
+    # Load ASM_Result
     data_files = {}
     if data_args.train_file is not None:
         data_files["train"] = data_args.train_file
@@ -239,57 +239,57 @@ def main():
 
     if training_args.do_train:
         if "train" not in raw_datasets:
-            raise ValueError("--do_train requires a train dataset")
+            raise ValueError("--do_train requires a train ASM_Result")
         train_dataset = raw_datasets["train"]
         if data_args.max_train_samples is not None:
             max_train_samples = min(len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
-        with training_args.main_process_first(desc="train dataset map pre-processing"):
+        with training_args.main_process_first(desc="train ASM_Result map pre-processing"):
             train_dataset = train_dataset.map(
                 preprocess_function_train,
                 batched=True,
                 num_proc=data_args.preprocessing_num_workers,
                 remove_columns=column_names,
                 load_from_cache_file=not data_args.overwrite_cache,
-                desc="Running tokenizer on train dataset",
+                desc="Running tokenizer on train ASM_Result",
             )
         print_dataset_example(train_dataset[0])
 
     if training_args.do_eval:
         max_target_length = data_args.val_max_target_length
         if "validation" not in raw_datasets:
-            raise ValueError("--do_eval requires a validation dataset")
+            raise ValueError("--do_eval requires a validation ASM_Result")
         eval_dataset = raw_datasets["validation"]
         if data_args.max_eval_samples is not None:
             max_eval_samples = min(len(eval_dataset), data_args.max_eval_samples)
             eval_dataset = eval_dataset.select(range(max_eval_samples))
-        with training_args.main_process_first(desc="validation dataset map pre-processing"):
+        with training_args.main_process_first(desc="validation ASM_Result map pre-processing"):
             eval_dataset = eval_dataset.map(
                 preprocess_function_eval,
                 batched=True,
                 num_proc=data_args.preprocessing_num_workers,
                 remove_columns=column_names,
                 load_from_cache_file=not data_args.overwrite_cache,
-                desc="Running tokenizer on validation dataset",
+                desc="Running tokenizer on validation ASM_Result",
             )
         print_dataset_example(eval_dataset[0])
 
     if training_args.do_predict:
         max_target_length = data_args.val_max_target_length
         if "test" not in raw_datasets:
-            raise ValueError("--do_predict requires a test dataset")
+            raise ValueError("--do_predict requires a test ASM_Result")
         predict_dataset = raw_datasets["test"]
         if data_args.max_predict_samples is not None:
             max_predict_samples = min(len(predict_dataset), data_args.max_predict_samples)
             predict_dataset = predict_dataset.select(range(max_predict_samples))
-        with training_args.main_process_first(desc="prediction dataset map pre-processing"):
+        with training_args.main_process_first(desc="prediction ASM_Result map pre-processing"):
             predict_dataset = predict_dataset.map(
                 preprocess_function_eval,
                 batched=True,
                 num_proc=data_args.preprocessing_num_workers,
                 remove_columns=column_names,
                 load_from_cache_file=not data_args.overwrite_cache,
-                desc="Running tokenizer on prediction dataset",
+                desc="Running tokenizer on prediction ASM_Result",
             )
         print_dataset_example(predict_dataset[0])
 
