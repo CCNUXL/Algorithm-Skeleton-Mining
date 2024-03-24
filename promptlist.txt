@@ -1,0 +1,6 @@
+What is the background of this paper?(Keep the word count within 50 words.)
+What are the application scopes of the paper?(Keep the word count within 50 words.)
+What are the specific methods proposed in the paper?(Keep the word count within 100 words.)
+What specific model names or models does the paper use?(Keep the word count within 50 words.)
+What datasets did the paper use for verification?(Keep the word count within 50 words.)
+What results did the paper produce?(Keep the word count within 100 words.)
