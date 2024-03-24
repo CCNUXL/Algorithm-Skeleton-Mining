@@ -1,1 +1,1 @@
-请从上述描述中找出与研究背景相关的描述, 没有则不给出, 答案只允许来自原文, 不能由你自己编造。
+Find descriptions related to the research background of the paper(no more than 50 words).
