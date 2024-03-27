@@ -44,79 +44,79 @@
 // Sentiment Analysis
 {
     "Paper_ID": 5,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "An Investigation of Transfer Learning-Based Sentiment Analysis in Japanese",
+    "Background": "This study mainly discusses the Japanese sentiment analysis method based on transfer learning.",
+    "Scope": "Sentiment Analysis",
+    "Approach": "\nThis article mentions the methods of BERT and ULMFiT models based on transfer learning, and fine-tunes the models on multiple datasets.",
+    "Model": "ELMo, ULMFiT and BERT",
+    "Dataset": "Rakuten product review dataset and Yahoo movie review dataset",
+    "Result": "The BERT and ULMFiT models based on transfer learning perform better than the specialized task model BCN+ELMo. Specifically, the error rate of BCN+ELMo is 10.24%, while ULMFiT is 4.45% and BERT is 4.68%."
 }
 {
     "Paper_ID": 6,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "SentiLARE: Sentiment-Aware Language Representation Learning with Linguistic Knowledge",
+    "Background": "SentiLARE is an innovative pre-trained language representation model specifically designed to improve the performance of sentiment analysis tasks.",
+    "Scope": "understanding of emotions in text",
+    "Approach": "SentiLARE uses SentiWordNet to obtain the sentiment scores of different meanings for each word, and determines the weight of each meaning through a context-aware attention mechanism, thereby assigning a more precise emotional polarity to the word.",
+    "Model": "BERT, LA-MLM",
+    "Dataset": "SST, IMDB, MR, Yelp-2, Yelp-5",
+    "Result": "SentiLARE achieved good performance on various tasks, outperforming general pre-trained models, task-specific pre-trained models, and task-specific models without pre-training."
 }
 {
     "Paper_ID": 7,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "Adapt or Get Left Behind:Domain Adaptation through BERT Language Model Fine tuning for Aspect-Target Sentiment Classification",
+    "Background": "The article presents a novel approach to domain adaptation for Aspect-Based Sentiment Analysis (ABSA) using BERT language model fine tuning, achieving state-of-the-art performance and providing insights through a case study on model prediction errors.",
+    "Scope": "The articles focus on using BERT models for Aspect-Based Sentiment Analysis (ABSA), including domain adaptation, model robustness evaluation, and input reduction methods, highlighting their applications in e-commerce and other domains within Natural Language Processing research.",
+    "Approach": "Methods include two-step ATSC approach with domain-specific BERT fine tuning, cross-domain evaluation, and input reduction for model interpretation.",
+    "Model": "BERT, BERT BASE, BERT-ADA, XLNet",
+    "Dataset": "SemEval 2014 Task 4 restaurants dataset, Laptops dataset, Restaurants dataset",
+    "Result": "State-of-the-art results on SemEval 2014 restaurants dataset. Limits of language model fine tuning explored. Input reduction method for interpreting model errors. Challenges in aspect-target sentiment classification addressed. Insights from case study on model errors provided."
 }
 {
     "Paper_ID": 8,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "Mask and Infill: Applying Masked Language Model to Sentiment Transfer",
+    "Background": "The paper introduces 'Mask and Infill', for sentiment transfer, using a bidirectional Masked Language Model to separate style from content and infill masked positions with context-conditioned words. Outperforms RNN-based methods in sentiment attribute modification.",
+    "Scope": "Sentiment transfer, text infilling, and natural language generation tasks benefit from the masked language model approach introduced in the article.",
+    "Approach": "The article proposes Mask and Infill for sentiment transfer. It masks sentimental tokens to separate style from content, then uses a bidirectional Masked Language Model to infill masked positions, improving sentiment transfer performance.",
+    "Model": "CrossAligned, StyleEmbedding and MultiDecoder, CycledReinforce, TemplateBased, RetrievalOnly, DeleteOnly, and DeleteAndRetrieval, LM Classifer",
+    "Dataset": "SemEval 2014 Task 4 restaurants dataset, Laptops dataset",
+    "Result": "The article demonstrates state-of-the-art sentiment classification through BERT fine tuning, addressing challenges and suggesting future directions."
 }
 {
     "Paper_ID": 9,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence",
+    "Background": "The article proposes sentence-pair classification for ABSA, leveraging BERT's fine-tuning, achieving state-of-the-art results, and advocating for its applicability to other tasks.",
+    "Scope": "The article's ABSA method using BERT has broad applications in sentiment analysis across domains, enhancing accuracy and efficiency for tasks like product reviews, customer feedback, and social media sentiment analysis.",
+    "Approach": "The article proposes converting ABSA into sentence-pair classification using BERT fine-tuning, ",
+    "Model": "BERT",
+    "Dataset": "SentiHood dataset, SemEval-2014 Task 4 dataset",
+    "Result": "the article demonstrates the effectiveness of using BERT and the conversion of ABSA into a sentence pair classification task for achieving improved results in aspect-based sentiment analysis."
 }
 {
     "Paper_ID": 10,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "BERT Post-Training for Review Reading Comprehension and Aspect-based Sentiment Analysis",
+    "Background": "Article introduces Review Reading Comprehension (RRC) using customer reviews, enhances BERT with post-training, addresses annotation challenges, and emphasizes e-commerce QA importance.",
+    "Scope": "Article focuses on e-commerce Review Reading Comprehension (RRC), introduces ReviewRC dataset, proposes BERT post-training, addresses annotation challenges, and emphasizes task-awareness.",
+    "Approach": "Article proposes BERT post-training for RRC, introduces ReviewRC dataset, addresses annotation challenges, emphasizes task-awareness, and highlights e-commerce QA importance.",
+    "Model": "BERT-LSTM, BERT-Attention, BERT-PT-LSTM, BERT-PT-Attention, BERT-PT, BERTBASE, ELMo, GPT, and BERT",
+    "Dataset": "The article mentions ABSA datasets such as Restaurant reviews, Laptop reviews, and the ACL 14 Twitter dataset. It also mentions the SNLI dataset for natural language inference (NLI) tasks.",
+    "Result": "The results of the article include the effectiveness of utilizing intermediate layers, improved performance in ABSA and NLI tasks, and the comparison of different models."
 }
 {
     "Paper_ID": 11,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "BERT Post-Training for Review Reading Comprehension and Aspect-based Sentiment Analysis",
+    "Background": "Article suggests BERT post-training to improve e-commerce Review Reading Comprehension (RRC), using ReviewRC dataset, addressing BERT's limitations.",
+    "Scope": "Article proposes BERT post-training to enhance e-commerce Review Reading Comprehension. It introduces ReviewRC dataset and discusses BERT's limitations.",
+    "Approach": "Article proposes post-training BERT for RRC and review tasks. It introduces ReviewRC dataset, addresses BERT limitations, and emphasizes using customer reviews for e-commerce decision-making.",
+    "Model": "BERT",
+    "Dataset": "Article uses ReviewRC, SemEval 2016 Task 5 (laptop and restaurant reviews), SemEval 2014 Task 4, and SemEval 2016 Task 5 (laptops and restaurants) datasets",
+    "Result": "Post-training BERT enhances RRC and other tasks like aspect extraction/classification. ReviewRC-trained RRC model shows promising results. Emphasizes BERT's adaptability for ABSA."
 }
 {
     "Paper_ID": 12,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
+    "Paper_Title": "Utilizing BERT Intermediate Layers for Aspect Based Sentiment Analysis and Natural Language Inference",
+    "Background": "Article explores BERT intermediate layers for ABSA and NLI tasks, proposing BERT-LSTM and BERT-Attention models. Achieves state-of-the-art ABSA results and enhances NLI.",
+    "Scope": "Article explores enhancing BERT with intermediate layers for ABSA and NLI, demonstrating state-of-the-art results and comparing with vanilla BERT and other models.",
     "Approach": "",
     "Model": "",
     "Dataset": "",
