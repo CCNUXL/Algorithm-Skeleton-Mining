@@ -117,20 +117,20 @@
     "Paper_Title": "Utilizing BERT Intermediate Layers for Aspect Based Sentiment Analysis and Natural Language Inference",
     "Background": "Article explores BERT intermediate layers for ABSA and NLI tasks, proposing BERT-LSTM and BERT-Attention models. Achieves state-of-the-art ABSA results and enhances NLI.",
     "Scope": "Article explores enhancing BERT with intermediate layers for ABSA and NLI, demonstrating state-of-the-art results and comparing with vanilla BERT and other models.",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Approach": "The article presents BERT-LSTM and BERT-Attention models for ABSA and NLI tasks, leveraging intermediate layers with LSTM-Pooling and Attention-Pooling. These models outperform previous methods, demonstrating the significance of utilizing intermediate representations.",
+    "Model": "BERT-LSTM, BERT-Attention, Vanilla BERT, Other BERT-based models, pytorch-pretrained-BERT:",
+    "Dataset": "The article uses ABSA datasets: SemEval 2014 Task 4 (Restaurant, Laptop) and ACL 14 Twitter, also SNLI dataset for NLI tasks, with random dev set selection.",
+    "Result": "The article enhances BERT for ABSA and NLI tasks, achieving state-of-the-art results on ABSA datasets and demonstrating effectiveness on NLI. BERT-LSTM and BERT-Attention models outperform vanilla BERT, validated with 10-fold cross-validation and SNLI dataset testing."
 }
 {
     "Paper_ID": 13,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "Exploiting BERT for End-to-End Aspect-based Sentiment Analysis",
+    "Background": "Article explores BERT for E2E-ABSA, outperforming baselines. Highlights dev set importance. Addresses ABSA model limitations, aided by grant support.",
+    "Scope": "Article explores BERT for E2E-ABSA, surpassing baselines. Stresses dev set use, offers benchmark. Discusses ABSA limitations, backed by grant, contributes to sentiment analysis field.",
+    "Approach": "Article utilizes BERT for E2E-ABSA, comparing with baselines, stressing dev set. Techniques include linear classification, self-attention, GRU. Supported by grant, addresses ABSA limitations.",
+    "Model": "BERT",
+    "Dataset": "SemEval, REST dataset and LAPTOP dataset, ",
+    "Result": "Experimental results demonstrate BERT's superiority in E2E-ABSA, showcasing robustness, effectiveness, and potential for real-world applications."
 }
 {
     "Paper_ID": 14,
@@ -142,6 +142,7 @@
     "Dataset": "",
     "Result": ""
 }
+// Named Entity Recognition
 {
     "Paper_ID": 15,
     "Paper_Title": "",
