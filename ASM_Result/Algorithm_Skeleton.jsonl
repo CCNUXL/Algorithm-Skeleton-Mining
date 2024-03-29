@@ -47,7 +47,7 @@
     "Paper_Title": "An Investigation of Transfer Learning-Based Sentiment Analysis in Japanese",
     "Background": "This study mainly discusses the Japanese sentiment analysis method based on transfer learning.",
     "Scope": "Sentiment Analysis",
-    "Approach": "\nThis article mentions the methods of BERT and ULMFiT models based on transfer learning, and fine-tunes the models on multiple datasets.",
+    "Approach": "This article mentions the methods of BERT and ULMFiT models based on transfer learning, and fine-tunes the models on multiple datasets.",
     "Model": "ELMo, ULMFiT and BERT",
     "Dataset": "Rakuten product review dataset and Yahoo movie review dataset",
     "Result": "The BERT and ULMFiT models based on transfer learning perform better than the specialized task model BCN+ELMo. Specifically, the error rate of BCN+ELMo is 10.24%, while ULMFiT is 4.45% and BERT is 4.68%."
@@ -134,23 +134,23 @@
 }
 {
     "Paper_ID": 14,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
-    "Result": ""
+    "Paper_Title": "Adversarial Training for Aspect-Based Sentiment Analysis with BERT",
+    "Background": "BAT improves ABSA with BERT, surpassing standard models. Further research may explore its versatility and comparison with other attacks.",
+    "Scope": "The article delves into adversarial training's role in ABSA using BERT models, presenting BAT's superiority and suggesting avenues for future research in ABSA tasks.",
+    "Approach": "The article employs adversarial training in the embedding space, introducing BAT for ABSA tasks in sentiment analysis, enhancing BERT models' performance through small perturbations.",
+    "Model": "The article employs BERT for ABSA tasks, introducing BAT to enhance BERT's performance through adversarial training, outperforming both standard BERT and domain-specific BERT-PT.",
+    "Dataset": "SemEval 2014 and SemEval 2016 datasets for ABSA.",
+    "Result": "BAT excels in ABSA with BERT, surpassing general BERT and BERT-PT, emphasizing hyperparameter tuning and dataset choice."
 }
 // Named Entity Recognition
 {
     "Paper_ID": 15,
-    "Paper_Title": "",
-    "Background": "",
-    "Scope": "",
-    "Approach": "",
-    "Model": "",
-    "Dataset": "",
+    "Paper_Title": "Contextual String Embeddings for Sequence Labeling",
+    "Background": "The article introduces contextual string embeddings, surpassing previous methods in sequence labeling tasks like NER. Released code facilitates reproducibility and extension to other tasks.",
+    "Scope": "The article introduces contextual string embeddings for NER, offering a reproducible framework for broader application in sequence labeling tasks.",
+    "Approach": "Character language model extracts contextual embeddings, enhancing sequence labeling like NER. Provided code ensures reproducibility and broader task application.",
+    "Model": "Character Language Model for Contextual String Embeddings",
+    "Dataset": "CONLL03 shared task dataset",
     "Result": ""
 }
 {
