@@ -1,2 +1,2 @@
 # Algorithm-Skeleton-Mining
-Code for handling algorithm paper data mining
+追踪论文集合中的算法框架的变化
