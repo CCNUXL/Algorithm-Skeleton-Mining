@@ -11,14 +11,31 @@ Tracing The Evolution of Algorithm Skeleton in Paper Collections
 | -------------- | ------------------------- | --------------------------------- |
 | INT4           | 6 GB                      | 7 GB                              |
 ### 1.2 Definition of algorithm skeleton
-#### Six-dimensional algorithm skeleton
+#### 1.2.1 Six-dimensional algorithm skeleton
 ![](resources/as.png)
 
 针对六个维度的算法特征信息, 我们设计了六种情况的Prompt来引导LLM提取特征
 
 | **维度特征**   | **提示模版**  |
 | -------------- | ------------------------- |
-| INT4           | 6 GB                      |
+| Background     | The writing background of the algorithm in the paper (note that only the original information in the article can be extracted, not generated)                                                                                                             |
+| Scope          | Applicable field scenarios of the algorithm in the paper (note that only the original information in the article can be extracted, not generated)                                                                                                          |
+| Approach       | Please keep the number of words within 200 to describe the specific implementation method proposed by the algorithm in the paper (note that only the original information in the article can be extracted, not generated)                                 |
+| Model          | Please control the number of words within 200 for the mathematical model or artificial intelligence description used in the algorithm of the paper (note that only the original information in the article can be extracted, not generated)                                                                                                                            |
+| Dataset        | Please keep the word count within 200 for the description of the datasets used in the algorithm verification of the paper (note that only the original information in the article can be extracted, not generated)                                        |
+| Result         | For a description of the results and significance of the paper's algorithm, please limit the number of words to less than 200 (note that only the original information in the article can be extracted, not generated)                                                                                                                            |
+
+同时，采用分段总结形式，将最终输出结果长度限定在可控范围
+
+| **提示模版**  |
+|------------- |
+|Please provide a concise summary of the above multiple paragraphs of text, with the number of words within 200.|
+
+#### 1.2.2 Text segmentation
+我们采用Langchain来对一整篇科技文章进行切分，切分的执行过程可以运行下述代码：
+``` python
+    python spliter.py
+```
 
 ### 1.3 Construction of Algorithm Skeleton Dataset of Survey paper Citations
 
